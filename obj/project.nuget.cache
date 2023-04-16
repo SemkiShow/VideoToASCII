@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "uwt32FFPoiAAMiiDUSoSn9QkI//WKUNOxdOHcGHT/S/t6YhZKzq4H/KksA28ZNAyY7h21xvyw+l5LPvrumZ7uw==",
+  "dgSpecHash": "u+rPcZq1C4/uZng3pYLRtMAt9Ym0t9AtzutG6j6OGlpGpIxMFX9ty34Ve1RqC3Csw0SidZefh49R99uC7wipbQ==",
   "success": true,
   "projectFilePath": "/home/semkishow/C#/VideoToASCII/VideoToASCII.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/semkishow/.nuget/packages/sixlabors.imagesharp/3.0.1/sixlabors.imagesharp.3.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
