@@ -1,0 +1,17 @@
+/home/semkishow/C#/VideoToASCII/obj/Debug/net6.0/VideoToASCII.csproj.AssemblyReference.cache
+/home/semkishow/C#/VideoToASCII/obj/Debug/net6.0/VideoToASCII.GeneratedMSBuildEditorConfig.editorconfig
+/home/semkishow/C#/VideoToASCII/obj/Debug/net6.0/VideoToASCII.AssemblyInfoInputs.cache
+/home/semkishow/C#/VideoToASCII/obj/Debug/net6.0/VideoToASCII.AssemblyInfo.cs
+/home/semkishow/C#/VideoToASCII/obj/Debug/net6.0/VideoToASCII.csproj.CoreCompileInputs.cache
+/home/semkishow/C#/VideoToASCII/bin/Debug/net6.0/VideoToASCII
+/home/semkishow/C#/VideoToASCII/bin/Debug/net6.0/VideoToASCII.deps.json
+/home/semkishow/C#/VideoToASCII/bin/Debug/net6.0/VideoToASCII.runtimeconfig.json
+/home/semkishow/C#/VideoToASCII/bin/Debug/net6.0/VideoToASCII.dll
+/home/semkishow/C#/VideoToASCII/bin/Debug/net6.0/ref/VideoToASCII.dll
+/home/semkishow/C#/VideoToASCII/bin/Debug/net6.0/VideoToASCII.pdb
+/home/semkishow/C#/VideoToASCII/bin/Debug/net6.0/SixLabors.ImageSharp.dll
+/home/semkishow/C#/VideoToASCII/obj/Debug/net6.0/VideoToASCII.csproj.CopyComplete
+/home/semkishow/C#/VideoToASCII/obj/Debug/net6.0/VideoToASCII.dll
+/home/semkishow/C#/VideoToASCII/obj/Debug/net6.0/ref/VideoToASCII.dll
+/home/semkishow/C#/VideoToASCII/obj/Debug/net6.0/VideoToASCII.pdb
+/home/semkishow/C#/VideoToASCII/obj/Debug/net6.0/VideoToASCII.genruntimeconfig.cache
