@@ -2,6 +2,9 @@
 using System.Diagnostics;
 using SixLabors.ImageSharp;
 using System.Threading;
+using System.IO;
+using SixLabors.ImageSharp.PixelFormats;
+using System.Linq;
 
 namespace VideoToASCII
 {
