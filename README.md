@@ -7,5 +7,5 @@ This program can play any video in terminal using only ASCII characters
 * Unzip it
 * Copy an mp4 video to the root of the project
 * Run `dotnet run`
-* To convert a video to text, enter s and follow the instructions. The conversion proces can take a long time
+* To convert a video to text, enter s and follow the instructions. The conversion process can take a long time
 * To play the converted video, enter l
