@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Diagnostics;
 using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.PixelFormats;
 using System.Threading;
 using System.IO;
-using SixLabors.ImageSharp.PixelFormats;
 using System.Linq;
 
 namespace VideoToASCII
@@ -50,13 +50,16 @@ namespace VideoToASCII
 		{
 			// Deleting files
 			File.Delete("text.txt");
-			Directory.Delete("images", true);
+			if (Directory.Exists("images"))
+			{
+				Directory.Delete("images", true);
+			}
 			Directory.CreateDirectory("images");
 
 			// Path to video
-			Console.WriteLine("Enter video number");
-			int videoID = Convert.ToInt16(Console.ReadLine());
-			string path = "video" + videoID + ".mp4";
+			Console.WriteLine("Enter video filename");
+			string? videoID = Console.ReadLine();
+			string path = videoID + ".mp4";
 
 			// Deleting video.txt file
 			File.Delete("text" + videoID + ".txt");
@@ -68,12 +71,12 @@ namespace VideoToASCII
 			
 			// Converting video to images
 			ProcessStartInfo startInfo = new ProcessStartInfo();
-			   startInfo.CreateNoWindow = false;
-			   startInfo.UseShellExecute = true;
-			   startInfo.FileName = "ffmpeg";
-			   startInfo.WindowStyle = ProcessWindowStyle.Minimized;
-			   startInfo.Arguments = "-i " + path + " images/image%01d.png -r " + FPS;
-		        Process.Start(startInfo).WaitForExit();
+			startInfo.CreateNoWindow = false;
+			startInfo.UseShellExecute = true;
+			startInfo.FileName = "ffmpeg";
+			startInfo.WindowStyle = ProcessWindowStyle.Minimized;
+			startInfo.Arguments = "-i " + path + " images/image%01d.png -r " + FPS;
+			Process.Start(startInfo).WaitForExit();
 			
 			// Converting images to text
 			Console.WriteLine("Getting the file count...");
@@ -98,17 +101,21 @@ namespace VideoToASCII
 		{
 			// Path to video
 			Console.WriteLine("Enter video number");
-			int videoID = Convert.ToInt16(Console.ReadLine());
+			string? videoID = Console.ReadLine();
 
 			// Initialization
 			Console.WriteLine("Loading...");
 			string[] ASCIIVideo = File.ReadAllText("text" + videoID + ".txt").Split("ё");
 			int newLinesToFit = Console.WindowHeight - ASCIIVideo[1].Split("\n").Length;
+			if (newLinesToFit < 1)
+			{
+				newLinesToFit = 1;
+			}
 			Console.WriteLine("Loaded. FPS is " + ASCIIVideo[0] + ". Confirm playing a video.");
 			Console.ReadKey();
 
 			// Playing a video
-			for (int i = 1; i <= ASCIIVideo.Length; i++)
+			for (int i = 1; i < ASCIIVideo.Length; i++)
 			{
 				Console.Write(ASCIIVideo[i] + new string('\n', newLinesToFit));
 				Thread.Sleep(Convert.ToInt16(1d / Convert.ToDouble(ASCIIVideo[0]) * 1000d));
@@ -122,7 +129,7 @@ namespace VideoToASCII
 		static void Main()
 		{
 			Console.WriteLine("Would you like to save(s) or load(l) a video?");
-			string answer = Console.ReadLine();
+			string? answer = Console.ReadLine();
 			if (answer.ToUpper() == "S")
 			{
 				Saving.Save();

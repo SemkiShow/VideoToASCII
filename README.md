@@ -1,11 +1,11 @@
 # Video To ASCII
-This program can play any video in console using only ASCII characters!
-___
+This program can play any video in terminal using only ASCII characters
+
 ## How to use
-1. Copy video{n}.mp4 to the root of the project, where n is any number (without curly brackets!).
-2. Run using "dotnet run".
-3. Enter s to convert video to text. You need to do this only one time. The generated text is saved.
-4. When the video is converted, you can run the program again and type l to load.
-
-Have fun!
-
+* Install [.NET 8](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) and [ffmpeg](https://ffmpeg.org/download.html)
+* Download the latest release
+* Unzip it
+* Copy an mp4 video to the root of the project
+* Run `dotnet run`
+* To convert a video to text, enter s and follow the instructions. The conversion proces can take a long time
+* To play the converted video, enter l
