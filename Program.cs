@@ -100,7 +100,7 @@ namespace VideoToASCII
 		public static void Load()
 		{
 			// Path to video
-			Console.WriteLine("Enter video number");
+			Console.WriteLine("Enter video filename");
 			string? videoID = Console.ReadLine();
 
 			// Initialization
