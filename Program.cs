@@ -133,6 +133,7 @@ namespace VideoToASCII
 			if (answer.ToUpper() == "S")
 			{
 				Saving.Save();
+				Loading.Load();
 			}
 			if (answer.ToUpper() == "L")
 			{
