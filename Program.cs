@@ -17,8 +17,8 @@ namespace VideoToASCII
 			var image = Image.Load<Rgba32>(path);
 			string ASCIIImage = "";
 
-			int xCrop = Convert.ToInt16(Math.Ceiling(image.Width / Console.WindowWidth * 1d + 0.5));
-			int yCrop = Convert.ToInt16(Math.Ceiling(image.Height / Console.WindowHeight * 1d + 0.5));
+			int xCrop = Convert.ToInt16(image.Width * 1d / Console.WindowWidth);
+			int yCrop = Convert.ToInt16(image.Height * 1d / Console.WindowHeight);
 			int crop = new int[] {xCrop, yCrop}.Max();
 			if (crop == 0) crop = 1;
 			
@@ -34,7 +34,6 @@ namespace VideoToASCII
 							if (x + j + 1 <= image.Width && y + i + 1 <= image.Height)
 							{
 								middleColor = middleColor + ((image[x + j, y + i].R + image[x + j, y + i].G + image[x + j, y + i].B) / 3);
-						
 							}
 						}
 					}
@@ -57,9 +56,9 @@ namespace VideoToASCII
 			Directory.CreateDirectory("images");
 
 			// Path to video
-			Console.WriteLine("Enter video filename");
+			Console.WriteLine("Enter video filename with extension");
 			string? videoID = Console.ReadLine();
-			string path = videoID + ".mp4";
+			string path = videoID;
 
 			// Deleting video.txt file
 			File.Delete("text" + videoID + ".txt");
@@ -100,7 +99,7 @@ namespace VideoToASCII
 		public static void Load()
 		{
 			// Path to video
-			Console.WriteLine("Enter video filename");
+			Console.WriteLine("Enter video filename with extension");
 			string? videoID = Console.ReadLine();
 
 			// Initialization
